@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exercice 6</title>
+</head>
+<body ng-app="myApp">
+    <!-- container Bootstrap -->
+    <div class="container">
+        <!-- header -->
+        <header>
+          <div class="jumbotron">
+            <h1 class="display-3 text-center text-dark">Exercice 6</h1>
+            <p class="lead text-center text-danger">Faire une page HTML contenant deux paragrahes et deux boutons.
+            Au clic sur le premier uniquement le paragrahe 1 doit être visible. Au clic sur le bouton deux, seulement le paragrahe 2 doit aparaître.</p>
+          </div>
+        </header>
+        <!-- main -->
+        <main>
+          <div class="d-flex justify-content-around flex-column mt-5">
+             <p ng-show="hello"> Bonjour à tous ! </p>
+             <button type="button" class="btn btn-dark" ng-click="hello = true; weather = false">Afficher</button>
+             <p ng-show="weather">Il fait beau aujourd'hui.</p>
+             <button type="button" class="btn btn-dark" ng-click="weather = true; hello = false">Afficher</button>
+          </div>
+        </main>
+        <!-- footer -->
+        <footer>
+
+        </footer>
+    </div>
+    <!-- scripts JQuery, Popper, Angular et Bootstrap-->
+    <script src="assets/js/jquery-3.4.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/angular/angular.min.js"></script>
+    <!-- mon script principal -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
